@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 // import { setUser } from '../../redux/slices/userinformation';
 import '../../styles/auth.css';
@@ -107,7 +108,7 @@ export default function RegisterPage() {
         </div>
 
         <p className='auth-footer'>
-          Already have an account? <a href='/login'>Login here</a>
+          Already have an account? <Link to='/login'>Login here</Link>
         </p>
       </div>
     </div>

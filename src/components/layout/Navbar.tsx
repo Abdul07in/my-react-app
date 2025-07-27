@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useAppSelector } from '../../redux/hooks';
 import { getAssetPath } from '../../utils/assetUtils';
 
@@ -21,7 +22,7 @@ const Navbar = () => {
     >
       <div className='container'>
         {/* Logo and Brand */}
-        <a className='navbar-brand d-flex align-items-center' href='#'>
+        <Link to='/' className='navbar-brand d-flex align-items-center'>
           <img
             src={getAssetPath('vite.svg')}
             alt='Logo'
@@ -30,7 +31,7 @@ const Navbar = () => {
             className='me-2'
           />
           <span>My React App</span>
-        </a>
+        </Link>
 
         {/* Mobile Toggle Button */}
         <button
@@ -45,19 +46,19 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
           <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <a className='nav-link active' href='#'>
+              <Link className='nav-link active' to='/'>
                 Home
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#projects'>
+              <Link className='nav-link' to='/projects'>
                 Projects
-              </a>
+              </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='#contact'>
+              <Link className='nav-link' to='/contact'>
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
 
