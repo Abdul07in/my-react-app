@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useAppSelector } from '../../redux/hooks';
+import { getAssetPath } from '../../utils/assetUtils';
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -22,7 +23,7 @@ const Navbar = () => {
         {/* Logo and Brand */}
         <a className='navbar-brand d-flex align-items-center' href='#'>
           <img
-            src='/vite.svg'
+            src={getAssetPath('vite.svg')}
             alt='Logo'
             width='30'
             height='30'
