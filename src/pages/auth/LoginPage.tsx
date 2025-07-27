@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setUser } from '../../redux/slices/userinformation';
+// import { useDispatch } from 'react-redux';
+// import { setUser } from '../../redux/slices/userinformation';
 import '../../styles/auth.css';
 
 interface LoginFormData {
@@ -9,17 +9,17 @@ interface LoginFormData {
 }
 
 export default function LoginPage() {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [formData, setFormData] = useState<LoginFormData>({
     email: '',
-    password: ''
+    password: '',
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -40,44 +40,46 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-box">
+    <div className='auth-container'>
+      <div className='auth-box'>
         <h2>Login</h2>
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="form-group">
+        <form onSubmit={handleSubmit} className='auth-form'>
+          <div className='form-group'>
             <input
-              type="email"
-              name="email"
-              placeholder="Email"
+              type='email'
+              name='email'
+              placeholder='Email'
               value={formData.email}
               onChange={handleInputChange}
               required
             />
           </div>
-          <div className="form-group">
+          <div className='form-group'>
             <input
-              type="password"
-              name="password"
-              placeholder="Password"
+              type='password'
+              name='password'
+              placeholder='Password'
               value={formData.password}
               onChange={handleInputChange}
               required
             />
           </div>
-          <button type="submit" className="auth-button">Login</button>
-        </form>
-        
-        <div className="social-login">
-          <button onClick={handleGoogleLogin} className="social-button google">
-            <i className="bi bi-google"></i> Login with Google
+          <button type='submit' className='auth-button'>
+            Login
           </button>
-          <button onClick={handleGithubLogin} className="social-button github">
-            <i className="bi bi-github"></i> Login with GitHub
+        </form>
+
+        <div className='social-login'>
+          <button onClick={handleGoogleLogin} className='social-button google'>
+            <i className='bi bi-google'></i> Login with Google
+          </button>
+          <button onClick={handleGithubLogin} className='social-button github'>
+            <i className='bi bi-github'></i> Login with GitHub
           </button>
         </div>
-        
-        <p className="auth-footer">
-          Don't have an account? <a href="/register">Register here</a>
+
+        <p className='auth-footer'>
+          Don't have an account? <a href='/register'>Register here</a>
         </p>
       </div>
     </div>

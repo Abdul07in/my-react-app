@@ -13,6 +13,8 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@auth/core": "^0.18.0",
+    "@react-oauth/google": "^0.12.2",
     "@reduxjs/toolkit": "^2.8.2",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
@@ -20,9 +22,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^6.15.0",
-    "@react-oauth/google": "^1.1.0",
-    "@auth/core": "^0.18.0"
+    "react-router-dom": "^6.15.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

@@ -7,8 +7,8 @@ export const store = configureStore({
   reducer: {
     counter: counterReducer,
     userInformation: userInformationReducer,
-    auth: authReducer
-  }
+    auth: authReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
